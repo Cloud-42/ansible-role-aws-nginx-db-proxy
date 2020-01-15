@@ -1,0 +1,11 @@
+---
+# vars file for dbproxy
+nginx:
+  user: nginx
+  worker_connections: 1024
+
+vhosts:
+  -
+    server_db_backend: "db_backend.domain.io:3306" 
+    server_db_backend_backup: "db_backend_backup.domain.io:3306"
+    server_listen_port: "3306"

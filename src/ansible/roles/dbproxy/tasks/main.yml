@@ -1,0 +1,3 @@
+---
+# tasks file for dbproxy
+- include: nginx.yml

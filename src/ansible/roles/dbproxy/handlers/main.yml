@@ -1,0 +1,5 @@
+---
+# handlers file for dbproxy
+- name: restart_nginx
+  service: name=nginx state=restarted
+  ignore_errors: yes

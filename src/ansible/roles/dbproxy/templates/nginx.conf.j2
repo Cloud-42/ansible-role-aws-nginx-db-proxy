@@ -1,0 +1,14 @@
+# CONFIGURATION FILE MANAGED BY ANSIBLE!
+user              {{nginx.user}};
+worker_processes  auto;
+error_log         /var/log/nginx/error.log;
+pid               /var/run/nginx.pid;
+
+events {
+    worker_connections  {{nginx.worker_connections}};
+    multi_accept        on;
+    use                 epoll;
+}
+
+worker_rlimit_nofile 40000;
+include /etc/nginx/conf.d/*.conf;
